@@ -1,18 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: pet-application
+  name: kinley-application
   namespace: argocd
 spec:
   project: default
 
   source:
-    repoURL: https://github.com/CloudSihmar/pet-argocd-k8s.git
+    repoURL: https://github.com/kwangchuk1002/pet-argocd-k8s.git
     targetRevision: HEAD
     path: .
   destination: 
     server: https://kubernetes.default.svc
-    namespace: pet
+    namespace: kinley-pet
 
   syncPolicy:
     syncOptions:
